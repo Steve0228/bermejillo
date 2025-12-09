@@ -1,0 +1,194 @@
+/* Reset básico */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    line-height: 1.6;
+}
+
+/* Menú de navegación */
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px; /* altura fija de la barra */
+}
+
+/* Logo */
+.topnav .logo img {
+    height: 180px;           /* más grande que la barra */
+    object-fit: contain;     /* mantiene proporción */
+    margin-top: -10px;       /* ajusta vertical sin agrandar navbar */
+}   
+
+/* Lista de menú */
+.topnav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin: 0 15px;
+}
+
+.topnav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.topnav ul li a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+/* Elemento activo */
+.topnav ul li.active a {
+    background-color: #397d3c;
+    border-radius: 5px;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;   /* centra las imágenes horizontalmente */
+    align-items: start;      /* alinea arriba para filas ordenadas */
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;             /* se adapta al tamaño de la columna */
+    height: auto;            /* mantiene proporción */
+    max-width: 350px;        /* limita tamaño máximo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);  /* efecto al pasar el cursor */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+
+
+/* Documentos */
+#documentos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#documentos ul li {
+    margin: 10px 0;
+}
+
+#documentos a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#documentos a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox Modal */
+#lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.document {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 900px;       /* más ancho para destacar */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.doc-preview {
+    width: 100%;
+    height: 600px;          /* más grande */
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.doc-buttons a {
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.doc-buttons a:hover {
+    background-color: #45a049;
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
